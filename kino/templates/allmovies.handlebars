@@ -1,3 +1,6 @@
+
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,11 +18,9 @@
     />
   </head>
   <body>
-    
 
- <main class="content"></main>
- <div class="header">
-     <a href="/"> <h1 class="kino">The Kino</h1></a>
+
+ 
         <nav class="headerNav">
             <ul class="headerNavUl">
               {{#each menu}}
@@ -29,11 +30,22 @@
             {{/each}}
             </ul>
         </nav>
-    </div>
+    
 
-   
-      {{{body}}}
-    </main>
+    
   </body>
 </html>
 
+
+
+
+
+<ul>
+{{#each movies }}
+  <li>
+    <a href="/movies/{{ this.id }}">
+      {{ this.attributes.title }}
+    </a>
+  </li>
+{{/each}}
+</ul>

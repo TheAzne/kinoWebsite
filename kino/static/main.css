@@ -4,6 +4,8 @@ body {
   .header {
     width: 100%;
     margin: 0 auto;
+    height: auto;
+  
   }
   .kino {
     font-size: 50px;
@@ -13,11 +15,14 @@ body {
     padding: 20px;
     height: auto;
     margin: 0;
+
   }
   
   .headerNav {
+    
     background-color: #986a4e;
     width: 100%;
+    
   }
   .headerNavUl {
     text-decoration: none;
@@ -59,8 +64,6 @@ body {
   
   
   }
-  
-  
   
   
   .carousel-cell img {

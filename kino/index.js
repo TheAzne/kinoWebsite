@@ -13,9 +13,47 @@ app.engine("handlebars", engine({
 app.set("view engine", "handlebars");
 app.set("views", "./templates");
 
-app.get("/", async (req, res) => {
+
+const menu =[
+    {
+        label: 'Home',
+        link: '/',
+      },
+
+      {
+        label: 'Movies',
+        link: '/allMovies',
+      },
+
+      {
+        label: 'About',
+        link: '/about',
+      },
+      {
+        label: 'Contact',
+        link: '/contact',
+      },
+]
+
+const menuWithActive = path => menu.map(item => {
+    return {
+      link: item.link,
+      label: item.label,
+      active: item.link == path,
+    };
+  });
+
+  app.get("/", async (req, res) => {
+    res.render("Home", {
+      menu: menuWithActive(req.path)
+    });
+  });
+
+
+app.get("/allMovies", async (req, res) => {
   const movies = await loadMovies();
-  res.render("home", { movies });
+  res.render("allmovies", { movies });
+   
 });
 
 app.get("/movies/:movieId", async (req, res) => {
