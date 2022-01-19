@@ -1,16 +1,117 @@
-* {
-    font-family: sans-serif;
+body {
+    background-color: #001416;
   }
-  
   .header {
-    padding: 1em;
-    background: #eee;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .kino {
+    font-size: 50px;
+    font-family: "Roboto Slab", serif;
+    background-color: rgb(0, 73, 79);
+    color: white;
+    padding: 20px;
+    height: auto;
+    margin: 0;
   }
   
-  .header h1 {
-    font-size: 2em;
+  .headerNav {
+    background-color: #986a4e;
+    width: 100%;
+  }
+  .headerNavUl {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 20px;
   }
   
-  .movie img {
-    max-width: 14rem;
+  .headerNavUl ul {
+    align-items: center;
+    text-align: center;
   }
+  .headerNavUl li {
+  }
+  
+  .headerNavUl a {
+    font-size: 30px;
+    font-family: "Neonderthaw", cursive;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+  }
+  
+  .allMovies {
+    font-size: 50px;
+    font-family: "Roboto Slab", serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel {
+    padding: 0px 0 10px 0px;
+  
+  
+  }
+  
+  
+  
+  
+  .carousel-cell img {
+    width: 1000px;
+    height: 500px;
+  }
+  /* external css: flickity.css */
+  .flickity-button {
+    background: transparent;
+  }
+  /* big previous & next buttons */
+  .flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+  }
+  /* icon color */
+  .flickity-button-icon {
+    fill: rgb(255, 255, 255);
+    color: black;
+    
+  }
+  /* hide disabled button */
+  .flickity-button:disabled {
+    display: none;
+    
+  }
+  
+  .footer {
+    margin-top: 100px;
+    color: white;
+  }
+  
+  .footerLinks {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+  }
+  .footerLinks a,
+  a:visited {
+    margin: 0px 10px;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+  
+  }
+  
+  .adress {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  
+  
