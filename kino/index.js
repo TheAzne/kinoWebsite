@@ -33,6 +33,7 @@ const menu =[
         label: 'Contact',
         link: '/contact',
       },
+     
 ]
 
 const menuWithActive = path => menu.map(item => {
@@ -48,6 +49,25 @@ const menuWithActive = path => menu.map(item => {
       menu: menuWithActive(req.path)
     });
   });
+
+  app.get("/allMovies", async (req, res) => {
+    res.render("allMovies", {
+      menu: menuWithActive(req.path)
+    });
+  });
+
+  app.get("/about", async (req, res) => {
+    res.render("about", {
+      menu: menuWithActive(req.path)
+    });
+  });
+
+  app.get("/contact", async (req, res) => {
+    res.render("contact", {
+      menu: menuWithActive(req.path)
+    });
+  });
+
 
 
 app.get("/allMovies", async (req, res) => {
