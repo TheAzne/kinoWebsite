@@ -26,7 +26,7 @@ app.get("/about", async (req, res) => {
   });
 
   app.get("/movies", async (req, res) => {
-    const movies = await loadMovie();
+    const movies = await loadMovies();
     res.render("./partials/allMovies", { movies });
   });
   
