@@ -35,7 +35,7 @@ app.get("/about", async (req, res) => {
 app.get("/movies/:movieId", async (req, res) => {
   const movie = await loadMovie(req.params.movieId);
   if (movie) {
-    res.render("movie", { movie });
+    res.render("./partials/movie", { movie });
   } else {
     res.status(404).render("404");
   }
@@ -45,25 +45,3 @@ app.use("/static", express.static("./static"));
 
 export default app;
 
-
-/* app.get("/", async (req, res) => {
-  res.render("index");
-});
-
-app.get("/movies", async (req, res) => {
-  const movies = await fetchAllMovies();
-  res.render("./partials/allmovies", { movies });
-});
-
-app.get("/movies/:movieId", async (req, res) => {
-  const movie = await fetchChosenMovie(req.params.movieId);
-  if (movie) {
-    res.render("./partials/movie", { movie });
-  } else {
-    res.status(404).render("404");
-  }
-});
-
-app.get('/covidinformation', (req, res) => {
-  res.render('./partials/covidinformation')
-}); */
