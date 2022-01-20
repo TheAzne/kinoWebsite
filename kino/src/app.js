@@ -14,20 +14,20 @@ app.set("view engine", "handlebars");
 app.set("views", "./templates");
 
 app.get("/", async (req, res) => {
-  res.render("home");
+  res.render("partials/home");
 });
 
 app.get("/about", async (req, res) => {
-    res.render("templates/partials/about");
+    res.render("partials/about");
   });
 
   app.get("/contact", async (req, res) => {
-    res.render("./partials/contact");
+    res.render("partials/contact");
   });
 
   app.get("/allmovies", async (req, res) => {
     const movies = await loadMovie();
-    res.render("./partials/allMovies", { movies });
+    res.render("partials/allMovies", { movies });
   });
   
 
