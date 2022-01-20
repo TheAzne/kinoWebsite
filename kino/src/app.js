@@ -14,20 +14,20 @@ app.set("view engine", "handlebars");
 app.set("views", "./templates");
 
 app.get("/", async (req, res) => {
-  res.render("partials/home");
+  res.render("./partials/home");
 });
 
 app.get("/about", async (req, res) => {
-    res.render("partials/about");
+    res.render("./partials/about");
   });
 
   app.get("/contact", async (req, res) => {
-    res.render("partials/contact");
+    res.render("./partials/contact");
   });
 
-  app.get("/allmovies", async (req, res) => {
+  app.get("/movies", async (req, res) => {
     const movies = await loadMovie();
-    res.render("partials/allMovies", { movies });
+    res.render("./partials/allMovies", { movies });
   });
   
 
@@ -44,3 +44,26 @@ app.get("/movies/:movieId", async (req, res) => {
 app.use("/static", express.static("./static"));
 
 export default app;
+
+
+/* app.get("/", async (req, res) => {
+  res.render("index");
+});
+
+app.get("/movies", async (req, res) => {
+  const movies = await fetchAllMovies();
+  res.render("./partials/allmovies", { movies });
+});
+
+app.get("/movies/:movieId", async (req, res) => {
+  const movie = await fetchChosenMovie(req.params.movieId);
+  if (movie) {
+    res.render("./partials/movie", { movie });
+  } else {
+    res.status(404).render("404");
+  }
+});
+
+app.get('/covidinformation', (req, res) => {
+  res.render('./partials/covidinformation')
+}); */
