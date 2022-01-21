@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon .",
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TheAzne/kinoWebsite/issues"
+    "url": "https://github.com/TheAzne/kinoWebsite/issues" 
   },
   "homepage": "https://github.com/TheAzne/kinoWebsite#readme",
   "dependencies": {
@@ -27,7 +27,9 @@
     "node-fetch": "^3.1.1"
   },
   "devDependencies": {
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15",
+    "supertest": "^6.2.2",
     "yarn": "^1.22.17"
   }
 }
