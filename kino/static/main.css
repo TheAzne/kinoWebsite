@@ -1,3 +1,8 @@
+
+.content{
+  background-color: #001416;
+}
+
 body {
     background-color: #001416;
   }
@@ -58,38 +63,10 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
-  .carousel {
-    padding: 0px 0 10px 0px;
-  
-  
-  }
-  
-  
-  .carousel-cell img {
-    width: 1000px;
-    height: 500px;
-  }
-  /* external css: flickity.css */
-  .flickity-button {
-    background: transparent;
-  }
-  /* big previous & next buttons */
-  .flickity-prev-next-button {
-    width: 100px;
-    height: 100px;
-  }
-  /* icon color */
-  .flickity-button-icon {
-    fill: rgb(255, 255, 255);
-    color: black;
+
     
-  }
-  /* hide disabled button */
-  .flickity-button:disabled {
-    display: none;
-    
-  }
+
+
   
   .footer {
     margin-top: 100px;
@@ -115,20 +92,23 @@ body {
       display: flex;
       justify-content: center;
       margin-top: 30px;
+      background-color: #001416;
+      margin: 0;
     }
   
   .mv{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    justify-content:space-between;
     list-style-type: none;
     text-decoration: none;
     padding: 50px;
+    height: 800px;
   }
 
   .mvLi a{
     
-    
+    font-size: 14px;
     list-style-type: none;
     text-decoration: none;
    
@@ -153,9 +133,8 @@ body {
     height: 800px;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
-
+    font-family: 'Roboto', sans-serif;
     
   }
 
@@ -165,12 +144,83 @@ body {
 
 }
 
-.oneMovie .intro{
-  width: 300px;
-  
+.intro{
+  width: 500px;
+  font-size: 15px;
+  text-align: center;
+
 }
   
 .oneMovie img{
+  
 
   height: 500px;
+}
+
+
+#carouselExampleIndicators{
+  background-color: #001416;
+}
+
+.aboutKino{
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 800px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.aboutKino p{
+  text-align: center;
+  width: 800px;
+
+}
+
+
+.contactForm{
+  color: white;
+  height: 800px;
+  padding: 50px;
+
+}
+
+.mb-3{
+  width: 400px;
+
+}
+
+.error{
+  display: flex;
+  justify-content: center;
+ color: beige;
+ height: 800px;
+
+ padding-top: 200px;
+}
+
+.wholeCar{
+  padding-top:50px ;
+  display: flex;
+  justify-content: center;
+ height: 800px;
+
+}
+
+
+
+.carousel-inner{
+  max-width: 900px;
+  max-height: 750px;
+}
+
+#carouselExampleIndicators{
+  max-width: 600px;
+}
+
+.carousel-inner img{
+width: 600px;
+  
 }
